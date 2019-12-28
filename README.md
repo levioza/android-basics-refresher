@@ -14,52 +14,99 @@ Most of the documentation in this website is composed of code snippets. It means
 ## Table of content
 
 <ol style="margin-left: -20px;">
-    <li><a href="#">Introduction</a></li>
-    <li><a href="#">Lists</a>
-        <ol>
-            <li><a href="#">ListView</a></li>
-            <li><a href="#">Custom ListView</a></li>
-            <li><a href="#">RecyclerView</a></li>
-        </ol>
-    </li>
-    <li><a href="#">Activities Communications</a>
-        <ol>
-            <li><a href="#">Intents with objects that implements parcelable</a></li>
-            <li><a href="#">Get back results from an activity</a></li>
-        </ol>
-    </li>
-    <li><a href="#">Fragments</a>
-        <ol>
-            <li><a href="#">Add Fragment</a></li>
-            <li><a href="#">Remove Fragment</a></li>
-            <li><a href="#">Pass Data to Fragment</a></li>
-            <li><a href="#">Communication with Activity</a></li>
-            <li><a href="#">Dialog in a Fragment</a></li>
-            <li><a href="#">Custom Dialog</a></li>
-            <li><a href="#">View Pager</a></li>
-            <li><a href="#">Shared Preferences</a></li>
-        </ol>
-    </li>
-    <li><a href="#">Storage Examples</a>
-        <ol>
-            <li><a href="#">SharedPreferences</a></li>
-            <li><a href="#">ImageCaching</a></li>
-        </ol>
-    </li>
-    <li><a href="#">Helpers</a>
-        <ol>
-            <li><a href="#">Check Connectivity</a></li>
-            <li><a href="#">Screen Utility</a></li>
-        </ol>
-    </li>
-    <li><a href="#">Concurrent Tasks (Multi-Threading)</a>
-        <ol>
-            <li><a href="#">AsyncTask</a></li>
-            <li><a href="#">ASyncTaskLoader</a></li>
-            <li><a href="#">IntentService</a></li>
-        </ol>
-    </li>
-    <li><a href="#">Libraries</a></li>
+  <li>
+    <a href="/">Introduction</a>
+  </li>
+  <li>
+    <a href="https://levioza.github.io/android-basics-refresher/src-lists-listview">Lists</a>
+    <ol>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-lists-listview">ListView</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-lists-custom-listview">Custom ListView</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-lists-recyclerview">RecyclerView</a>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href="https://levioza.github.io/android-basics-refresher/src-activities-communications-intents-with-objects-that-implements-parcelable">Activities Communications</a>
+    <ol>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-activities-communications-intents-with-objects-that-implements-parcelable">Intents with objects that implements parcelable</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-activities-communications-get-back-results-from-an-activity">Get back results from an activity</a>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href="https://levioza.github.io/android-basics-refresher/src-fragments-add-fragment">Fragments</a>
+    <ol>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-add-fragment">Add Fragment</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-remove-fragment">Remove Fragment</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-pass-data-to-fragment">Pass Data to Fragment</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-communication-with-activity">Communication with Activity</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-dialog-in-a-fragment">Dialog in a Fragment</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-custom-dialog">Custom Dialog</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-viewpager">ViewPager</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-fragments-sharedpreferences">SharedPreferences</a>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href="https://levioza.github.io/android-basics-refresher/src-storage-sharedpreferences">Storage</a>
+    <ol>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-storage-sharedpreferences">SharedPreferences</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-storage-image-caching">ImageCaching</a>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href="https://levioza.github.io/android-basics-refresher/src-helpers-check-connectivity">Helpers</a>
+    <ol>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-helpers-check-connectivity">Check Connectivity</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-helpers-screen-utility">Screen Utility</a>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href="https://levioza.github.io/android-basics-refresher/src-concurrent-tasks-asynctask">Concurrent Tasks</a>
+    <ol>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-concurrent-tasks-asynctask">AsyncTask</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-concurrent-tasks-asynctask-loader">ASyncTaskLoader</a>
+      </li>
+      <li>
+        <a href="https://levioza.github.io/android-basics-refresher/src-concurrent-tasks-intent-service">IntentService</a>
+      </li>
+    </ol>
+  </li>
 </ol>
 
 ## License

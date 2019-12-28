@@ -1,0 +1,28 @@
+---
+name: 1. SharedPreferences
+menu: 5. Storage
+---
+
+# Description
+
+TODO - Write Description.
+
+## Code
+
+### Save Data
+
+```java
+String MY_GLOBAL_PREFS = "my_global_prefs";
+SharedPreferences.Editor editor =
+                    getSharedPreferences(MY_GLOBAL_PREFS, MODE_PRIVATE).edit();
+            editor.putString(SigninActivity.EMAIL_KEY, email);
+            editor.apply();
+```
+
+### Get Data
+
+```java
+SharedPreferences prefs =
+                getSharedPreferences(.MY_GLOBAL_PREFS, MODE_PRIVATE);
+        String email = prefs.getString(EMAIL_KEY, "");
+```

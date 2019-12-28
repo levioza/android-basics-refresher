@@ -1,0 +1,48 @@
+---
+name: 2. Remove Fragment
+menu: 4. Fragments
+---
+
+# Description
+
+TODO - Write Description.
+
+## Code
+
+### MainActivity.java
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    public static final String FRAGMENT_TAG = "fragment_tag";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+    public void addClickHandler(View view) {
+        SimpleFragment fragment = new SimpleFragment();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack(null)
+                .add(R.id.fragment_container, fragment, FRAGMENT_TAG)
+                .commit();
+    }
+
+    public void removeClickHandler(View view) {
+
+        Fragment fragment =
+                getSupportFragmentManager()
+                .findFragmentByTag(FRAGMENT_TAG);
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .remove(fragment)
+                    .commit();
+        }
+    }
+}
+```

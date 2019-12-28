@@ -1,0 +1,24 @@
+---
+name: 1. Intents with objects that implements parcelable
+menu: 3. Activities Communications
+---
+
+# Description
+
+TODO - Write Description.
+
+## Code
+
+### Package an intent
+
+```java
+Intent intent = new Intent(this, DetailActivity.class);
+                intent.putExtra(ITEM_KEY, item);
+                this.startActivity(intent);
+```
+
+### Get Intent
+
+```java
+DataItem item = getIntent().getExtras().getParcelable(ITEM_KEY);
+```

@@ -1,0 +1,148 @@
+---
+name: 4. Communication with Activity
+menu: 4. Fragments
+---
+
+# Description
+
+TODO - Write Description.
+
+## Code
+
+### MainActivity.java
+
+```java
+public class MainActivity extends AppCompatActivity
+        implements DetailFragment.FragmentListener {
+
+    private static final String TAG = "MainActivity";
+    private boolean mTablet;
+    private ViewGroup fragmentContainer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        fragmentContainer = (ViewGroup) findViewById(R.id.detail_fragment_container);
+        mTablet = (fragmentContainer != null);
+
+        TextView tvOut = (TextView) findViewById(R.id.textOut);
+        tvOut.setText("Fragments side-by-side? " + mTablet);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        assert fab != null;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewDetailFragment();
+            }
+        });
+
+    }
+
+    private void viewDetailFragment() {
+
+        if (mTablet) {
+            FragmentManager fragmentManager =
+                    getSupportFragmentManager();
+            DetailFragment fragment = new DetailFragment();
+            fragmentManager.beginTransaction()
+                    .add(R.id.detail_fragment_container, fragment)
+                    .commit();
+        } else {
+            Intent intent = new Intent(this, DetailActivity.class);
+            startActivity(intent);
+        }
+
+    }
+
+    @Override
+    public void onFragmentFinish(String firstName, String lastName, int age) {
+        Log.i(TAG, "onFragmentFinish: " + firstName + ", "
+                + lastName + ", " + age);
+    }
+}
+
+```
+
+### MainActivityFragment.java
+
+```java
+public class MainActivityFragment extends Fragment {
+
+    public MainActivityFragment() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_main, container, false);
+    }
+}
+```
+
+### DetailFragment.java
+
+```java
+public class DetailFragment extends Fragment {
+
+    private EditText textFirstName, textLastName, textAge;
+    private FragmentListener mListener;
+
+    public DetailFragment() {
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        if (!(context instanceof FragmentListener)) throw new AssertionError();
+        mListener = (FragmentListener) context;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
+
+        textFirstName = (EditText) rootView.findViewById(R.id.textFirstName);
+        textLastName = (EditText) rootView.findViewById(R.id.textLastName);
+        textAge = (EditText) rootView.findViewById(R.id.textAge);
+
+        Button doneButton = (Button) rootView.findViewById(R.id.done_button);
+        doneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                done();
+            }
+        });
+        return rootView;
+    }
+
+    private void done() {
+	// Call the listener here.
+    }
+
+    public interface FragmentListener {
+        void onFragmentFinish(String firstName, String lastName, int age);
+    }
+}
+```
+
+### DetailActivity.java
+
+```java
+public class DetailActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detail);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+}
+```
