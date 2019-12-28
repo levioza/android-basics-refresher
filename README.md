@@ -15,7 +15,7 @@ Most of the documentation in this website is composed of code snippets. It means
 
 <ol style="margin-left: -20px;">
   <li>
-    <a href="/">Introduction</a>
+    <a href="https://levioza.github.io/android-basics-refresher/">Introduction</a>
   </li>
   <li>
     <a href="https://levioza.github.io/android-basics-refresher/src-lists-listview">Lists</a>
