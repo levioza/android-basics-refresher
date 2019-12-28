@@ -16,7 +16,8 @@
     "prettier": "prettier --write \"src/**/*.{mdx,md}\" && prettier --write \"./*.md\"",
     "commit": "npx git-cz",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "deploy": "yarn build && gh-pages -d .docz/dist -r https://$GH_TOKEN@github.com/levioza/android-basics-refresher"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md,mdx}": [
@@ -43,6 +44,7 @@
     "@types/react-dom": "^16.8.4",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
+    "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "prettier/prettier"
