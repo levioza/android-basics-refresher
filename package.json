@@ -4,6 +4,7 @@
   "description": "The main goal of building and maintaining this website is to have a live cheat sheet of many of the most commonly used APIs in Android.",
   "version": "0.0.1",
   "license": "CC BY-NC-SA",
+  "repository": "https://github.com/levioza/android-basics-refresher",
   "homepage": "https://levioza.github.io/android-basics-refresher",
   "files": [
     "src/",
