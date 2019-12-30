@@ -9,7 +9,7 @@ The main goal of building and maintaining this website is to have a live cheat s
 
 ## What you should expect
 
-Most of the documentation in this website is composed of code snippets. It means that you will find this documentation beneficial in case you are already familiar with the APIs of the code snippets provided here and you just need a basic refresher about these APIs. Most the examples here were inspired by courses that I took online on LinkedIn Learning as well as while coding Android projects. In the libraries section, you will find the libraries that I use to simplify many complex tasks.
+Most of the documentation in this website is composed of code snippets. It means that you will find this documentation beneficial in case you are already familiar with the APIs of the code snippets provided here and you just need a basic refresher about these APIs. Most of the examples here were inspired by courses that I took online on LinkedIn Learning as well as while coding Android projects. In the libraries section, you will find the libraries that I use to simplify many complex tasks.
 
 ## Table of content
 
