@@ -5,7 +5,7 @@ menu: 4. Fragments
 
 # Description
 
-TODO - Write Description.
+In this example, we can see how we can load a fragment inside a fragment container.
 
 ## Code
 
@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         fragment = new SimpleFragment();
-
     }
 
     public void clickHandler(View view) {
@@ -39,16 +38,13 @@ public class MainActivity extends AppCompatActivity {
 ```java
 public class SimpleFragment extends Fragment {
 
-
     public SimpleFragment() {
-        // Required empty public constructor
+        // Required empty public constructor.
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment.
         return inflater.inflate(R.layout.fragment_simple, container, false);
     }
 }

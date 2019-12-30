@@ -5,7 +5,7 @@ menu: 4. Fragments
 
 # Description
 
-TODO - Write Description.
+In this example, we can see how to create a SharedPreferences fragment.
 
 ## Code
 
@@ -40,15 +40,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSettingsClick(MenuItem item) {
-
         Intent intent = new Intent(this, MyPreferencesActivity.class);
         startActivity(intent);
     }
 
     public void onTestPrefClick(MenuItem item) {
 
-        SharedPreferences preferences = PreferenceManager
-                .getDefaultSharedPreferences(this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userName = preferences.getString("username", "not defined");
 
         Toast.makeText(MainActivity.this, "User name: " + userName,

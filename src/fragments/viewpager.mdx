@@ -5,7 +5,7 @@ menu: 4. Fragments
 
 # Description
 
-TODO - Write Description.
+In this example, we can see how to create a viewpager.
 
 ## Code
 
@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        PagerAdapter pagerAdapter =
-                new ViewPagerAdapter(getSupportFragmentManager());
+        PagerAdapter pagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(pagerAdapter);
     }
 
@@ -92,7 +91,7 @@ public class ItemFragment extends Fragment {
         mProduct = args.getParcelable(PRODUCT_KEY);
         if (mProduct == null) throw new AssertionError();
 
-        // Display text and image
+        // Display data.
         TextView nameText = (TextView) rootView.findViewById(R.id.nameText);
         nameText.setText(mProduct.getName());
 

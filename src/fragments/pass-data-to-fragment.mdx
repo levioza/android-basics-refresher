@@ -5,7 +5,7 @@ menu: 4. Fragments
 
 # Description
 
-TODO - Write Description.
+In this example, we can see how to pass data from an activity to a fragment.
 
 ## Code
 
@@ -14,7 +14,6 @@ TODO - Write Description.
 ```java
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickHandler(View view) {
-
         Bundle arguments = new Bundle();
         arguments.putString(SimpleFragment.MESSAGE_KEY, "Passed as an argument");
 
@@ -50,7 +48,7 @@ public class SimpleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment.
         View view = inflater.inflate(R.layout.fragment_simple, container, false);
 
         Bundle arguments = getArguments();
