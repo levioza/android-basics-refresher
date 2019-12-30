@@ -15,8 +15,8 @@ TODO - Write Description.
 String MY_GLOBAL_PREFS = "my_global_prefs";
 SharedPreferences.Editor editor =
                     getSharedPreferences(MY_GLOBAL_PREFS, MODE_PRIVATE).edit();
-            editor.putString(SigninActivity.EMAIL_KEY, email);
-            editor.apply();
+editor.putString(SigninActivity.EMAIL_KEY, email);
+editor.apply();
 ```
 
 ### Get Data
@@ -24,5 +24,5 @@ SharedPreferences.Editor editor =
 ```java
 SharedPreferences prefs =
                 getSharedPreferences(.MY_GLOBAL_PREFS, MODE_PRIVATE);
-        String email = prefs.getString(EMAIL_KEY, "");
+String email = prefs.getString(EMAIL_KEY, "");
 ```

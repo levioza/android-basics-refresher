@@ -5,7 +5,7 @@ menu: 2. Lists
 
 # Description
 
-TODO - Write Description.
+In this example, you will find the code that could help you implement a custom listview based on a layout that you coded yourself. We simply get the data from a SampleDataProvider and then we sort the data provided and display it in the custom listview using a custom array adapter.
 
 ## Code
 
@@ -55,7 +55,8 @@ public class DataItemAdapter extends ArrayAdapter<DataItem> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
+        // This is important to prevent re-initializing the cell in case it has
+        // been already inflated.
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.list_item, parent, false);
         }

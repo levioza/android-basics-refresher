@@ -5,7 +5,7 @@ menu: 2. Lists
 
 # Description
 
-TODO - Write Description.
+In this example, you will find the code that could help you implement a recyclerview based on a layout that you coded yourself. We simply get the data from a SampleDataProvider and then we sort the data provided and display it in the recyclerView using a custom adapter that implements the viewholder pattern.
 
 ## Code
 
@@ -47,6 +47,7 @@ public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHo
     private Context mContext;
 
     public DataItemAdapter(Context context, List<DataItem> items) {
+
         this.mContext = context;
         this.mItems = items;
     }

@@ -5,7 +5,7 @@ menu: 3. Activities Communications
 
 # Description
 
-TODO - Write Description.
+In this example, we can find how to pass data from an activity to a previous activity while preparing the activity that will recieve the feedback by calling the `startActivityForResult(intent, SIGNIN_REQUEST)` with a request number that would identify the session bewtween 2 activities and by implementing the `onActivityResult` method. The activity that would send the feedback would need to package the intent and set the result using `setResult(RESULT_OK, getIntent());` and then it would be important to dismiss the activity to return to the previos activity using `finish();` where `onActivityResult` will get executed.
 
 ## Code
 
