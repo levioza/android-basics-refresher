@@ -5,7 +5,7 @@ menu: 5. Storage
 
 # Description
 
-TODO - Write Description.
+The following code snippets present how to save data to the shared preferences and get data from the shared preferences.
 
 ## Code
 
@@ -13,8 +13,7 @@ TODO - Write Description.
 
 ```java
 String MY_GLOBAL_PREFS = "my_global_prefs";
-SharedPreferences.Editor editor =
-                    getSharedPreferences(MY_GLOBAL_PREFS, MODE_PRIVATE).edit();
+SharedPreferences.Editor editor = getSharedPreferences(MY_GLOBAL_PREFS, MODE_PRIVATE).edit();
 editor.putString(SigninActivity.EMAIL_KEY, email);
 editor.apply();
 ```
@@ -22,7 +21,6 @@ editor.apply();
 ### Get Data
 
 ```java
-SharedPreferences prefs =
-                getSharedPreferences(.MY_GLOBAL_PREFS, MODE_PRIVATE);
+SharedPreferences prefs = getSharedPreferences(.MY_GLOBAL_PREFS, MODE_PRIVATE);
 String email = prefs.getString(EMAIL_KEY, "");
 ```
